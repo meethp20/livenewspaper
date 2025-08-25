@@ -1,8 +1,6 @@
-'use client'
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { motion, useAnimate } from "motion/react";
-import { useEffect } from "react";
 import "./globals.css";
 import AnimatedScreen from "./components/animatedScreen";
 

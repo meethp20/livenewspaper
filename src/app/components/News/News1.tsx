@@ -1,5 +1,7 @@
+'use client'
 const News1 = () => {
-  return (
+
+    return (
     <div className=" flex flex-row justify-between gap-5 my-8  ">
       <div className=" basis-1/2 ">
         <div className=" pb-3">

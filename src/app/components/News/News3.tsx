@@ -1,3 +1,6 @@
+'use client'
+
+
 const News3 = () => {
   return (
     <div className=" flex flex-row gap-5 text-justify">

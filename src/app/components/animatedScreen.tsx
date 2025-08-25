@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 
@@ -24,11 +26,9 @@ function AnimatedScreen({ children }: Props) {
   // Run animation sequence
   useEffect(() => {
     async function sequence() {
-      await animate(scope.current, [
-        { scale: 0.4, y: 0, duration: 1, delay: 1 },
-        { y: -document.documentElement.scrollHeight * 0.26, duration: 1, ease: "easeOut" },
-        { scale: 1, y: 0, rotate: -360, duration: 2.5, ease: "easeInOut" }
-      ]);
+      await animate(scope.current, { scale: 0.4, y: 0 }, { duration: 1, delay: 1 });
+      await animate(scope.current, { y: -document.documentElement.scrollHeight * 0.26 }, { duration: 1, ease: "easeOut" });
+      await animate(scope.current, { scale: 1, y: 0, rotate: -360 }, { duration: 2.5, ease: "easeInOut" });
     }
     sequence();
   }, [animate, scope]);
