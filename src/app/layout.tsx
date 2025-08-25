@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { motion, useAnimate } from "motion/react";
 import { useEffect } from "react";
 import "./globals.css";
+import AnimatedScreen from "./components/animatedScreen";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AnimatedScreen >
         {children}
+        </AnimatedScreen>
       </body>
     </html>
   );
